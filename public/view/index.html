@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IoT Statistics and Controls</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="/public/view/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="/public/view/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="/public/view/css/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="/public/view/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="/public/view/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/public/view/img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <header class="header">   
+      <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid d-flex align-items-center justify-content-between">     
+              <div class="navbar-header">
+                  <!-- Navbar Header--><a href="#" class="navbar-brand">
+                    <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">IoT</strong><strong>LAB</strong></div>
+                    <div class="brand-text brand-sm"><strong class="text-primary">I</strong><strong>T</strong></div></a>
+                  <!-- Sidebar Toggle Btn-->
+                  <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
+                </div>
+            
+          <div class="right-menu list-inline no-margin-bottom">    
+            <!-- Log out               -->
+            <div class="list-inline-item logout">                 
+            <a id="logout" href="login.html" class="nav-link"> <span class="d-none d-sm-inline">Logout </span><i class="icon-logout"></i></a></div>
+          </div>
+          </div>
+          </nav>
+    </header>
+    <div class="d-flex align-items-stretch">
+      <!-- Sidebar Navigation-->
+      <nav id="sidebar">
+        <!-- Sidebar Header-->
+        <div class="sidebar-header d-flex align-items-center">
+          <div class="avatar"><img src="img/avatar-6.jpg" alt="..." class="img-fluid rounded-circle"></div>
+          <div class="title">
+            <h1 class="h5">Ityav Luke</h1>
+            <p>Admin</p>
+          </div>
+        </div>
+      </nav>
+      <!-- Sidebar Navigation end-->
+      <div class="page-content">
+        <div class="page-header">
+          <div class="container-fluid">
+            <h2 class="h5 no-margin-bottom">IOT Dashboard</h2>
+          </div>
+        </div>
+<!--         <section class="no-padding-top no-padding-bottom">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="statistic-block block">
+                  <div class="progress-details d-flex align-items-end justify-content-between">
+                    <div class="title">
+                      <div class="icon"><i class="icon-user-1"></i></div><strong>New Clients</strong>
+                    </div>
+                    <div class="number dashtext-1">27</div>
+                  </div>
+                  <div class="progress progress-template">
+                    <div role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-1"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="statistic-block block">
+                  <div class="progress-details d-flex align-items-end justify-content-between">
+                    <div class="title">
+                      <div class="icon"><i class="icon-contract"></i></div><strong>New Projects</strong>
+                    </div>
+                    <div class="number dashtext-2">375</div>
+                  </div>
+                  <div class="progress progress-template">
+                    <div role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="statistic-block block">
+                  <div class="progress-details d-flex align-items-end justify-content-between">
+                    <div class="title">
+                      <div class="icon"><i class="icon-paper-and-pencil"></i></div><strong>New Invoices</strong>
+                    </div>
+                    <div class="number dashtext-3">140</div>
+                  </div>
+                  <div class="progress progress-template">
+                    <div role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="statistic-block block">
+                  <div class="progress-details d-flex align-items-end justify-content-between">
+                    <div class="title">
+                      <div class="icon"><i class="icon-writing-whiteboard"></i></div><strong>All Projects</strong>
+                    </div>
+                    <div class="number dashtext-4">41</div>
+                  </div>
+                  <div class="progress progress-template">
+                    <div role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+
+        <section class="no-padding-bottom">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="bar-chart block no-margin-bottom">
+                    <div class="card">
+                        <div class="card-header">
+                          Featured
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="bar-chart block">
+                  
+                </div>
+              </div>
+              <div class="col-lg-8">
+                  <div class="card">
+                      <div class="card-header">
+                        LED
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Control led light by clicking On /Off button</h5>
+                          <button class="btn btn-success btn-lg active"  id="ledOnBtn">Led On</button>
+                          <button class="btn btn-danger btn-lg active"  id="ledOffBtn">Led Off</button>
+                      </div>
+                      <div class="card-footer">
+                         <h4 id="ledStatus"></h4> 
+                        </div>
+
+                    </div>
+
+                <div class="line-cahrt block">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+     <!--    <section>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="stats-with-chart-2 block">
+                  <div class="title"><strong class="d-block">Credit Sales</strong><span class="d-block">Lorem ipsum dolor sit</span></div>
+                  <div class="piechart chart">
+                    <canvas id="pieChartHome1"></canvas>
+                    <div class="text"><strong class="d-block">$2.145</strong><span class="d-block">Sales</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="stats-with-chart-2 block">
+                  <div class="title"><strong class="d-block">Channel Sales</strong><span class="d-block">Lorem ipsum dolor sit</span></div>
+                  <div class="piechart chart">
+                    <canvas id="pieChartHome2"></canvas>
+                    <div class="text"><strong class="d-block">$7.784</strong><span class="d-block">Sales</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="stats-with-chart-2 block">
+                  <div class="title"><strong class="d-block">Direct Sales</strong><span class="d-block">Lorem ipsum dolor sit</span></div>
+                  <div class="piechart chart">
+                    <canvas id="pieChartHome3"></canvas>
+                    <div class="text"><strong class="d-block">$4.957</strong><span class="d-block">Sales</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <footer class="footer">
+          <div class="footer__block block no-margin-bottom">
+            <div class="container-fluid text-center">
+              <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+              <p class="no-margin-bottom">2019 &copy; Your company. Design by <a href="https://bootstrapious.com/p/bootstrap-4-dark-admin">Bootstrapious</a>.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- JavaScript files-->
+    <script src="/public/view/vendor/jquery/jquery.min.js"></script>
+    <script src="/public/view/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="/public/view/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/public/view/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="/public/view/vendor/chart.js/Chart.min.js"></script>
+    <script src="/public/view/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="/public/view/js/charts-home.js"></script>
+    <script src="/public/view/js/front.js"></script>
+    <script src="/public/view/js/custom/Led.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $("#ledOnBtn").on('click',function(){
+
+         LedController.onLed('/led/on', {action: 'on'}).then(function(data){
+
+          $("#ledStatus").html('<a href="#" class="badge badge-info">Led status:  '+data.status+'</a>');
+
+         }) 
+      });
+      $("#ledOffBtn").on('click',function(){
+        LedController.offLed('/led/off', {action: 'off'}).then(function(data){
+          $("#ledStatus").html('<a href="#" class="badge badge-warning">Led status:  '+data.status+'</a>');
+        })
+      });
+    });
+    </script>
+  </body>
+</html>

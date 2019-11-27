@@ -1,0 +1,27 @@
+app.use('/public/',express.static(__dirname +'/public/'));
+app.use('/public/view/',express.static(__dirname +'/public/view/'));var express = require('express'); 
+var app = express();
+var path = require('path');
+var gpio = require('rpi-gpio');
+var router = express.Router();
+const bodyParser = require('body-parser');
+
+var path = __dirname + '/public/';
+app.use(bodyParser.urlencoded({ extended: true,limit: '100mb' })); 
+app.use(bodyParser.json({ limit: '100mb' }));
+
+gpio.setup(7, gpio.DIR_OUT);
+
+app.use('/public/',express.static(__dirname, '/public/'));
+app.use('/public/view/',express.static(__dirname, '/public/view/'));
+
+app.use('/',router);
+
+router.get("/", function(req,res){
+	res.sendFile(path + "view/index.html");
+})
+app.use('/led', require('./route/Led'));
+
+app.listen(3000, function () {
+  console.log('Server Started on Port: 3000!')
+})
